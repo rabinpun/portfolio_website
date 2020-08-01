@@ -1,0 +1,177 @@
+/*Master styless*/
+body
+{
+	margin: 0px; /*removes default margin*/
+}
+
+.container
+{
+	display: grid;	/*puts grid layout on inner content:contents become column*/
+	grid-template-columns: 1fr;/* one column takes full screen width*/
+	background-image: blur;
+}
+
+
+
+/*navbar styles*/
+.nav-wrapper
+{
+	display: flex;/*display type flex makes the content to form in same row different column instead of diffent row different column*/
+	justify-content: space-between;/*the inner different divs get stretched apart*/
+	padding: 38px;
+}
+.left-side
+{
+	display: flex;
+	justify-content: space-between;
+}
+.home
+{
+	color: red;
+}
+.nav-wrapper > .left-side > div
+{
+	margin-right: 20px;/*margin of 20px at right*/
+	font-size: 0.9em;/*90percent of original*/
+	text-transform: uppercase;/*transforms the text to capitals*/
+	
+
+}
+.nav-link-wrapper
+{
+	height: 22px;
+	border-bottom: 1px solid transparent; 
+	transition: border-bottom 1s;/*initializing the border-bottom(underline) component and time duration of transition*/
+}
+
+
+
+.nav-link-wrapper a {
+	color: #8a8a8a;
+	text-decoration: none;/*removes any existing decoration*/
+	transition: color 1s;/*initiatizing for transition of the color component and the time durtation of transition*/
+}
+
+.nav-link-wrapper:hover
+{
+	border-bottom: 1px solid black;/*border becomes black*/
+
+}
+
+.nav-link-wrapper a:hover/*a component of nav-link-wrapper*/
+{
+	color: black;/*when hover mouse over the content the transition takes plase to black*/
+
+}
+
+/*portfolio styles*/
+.portfolio-items-wrapper
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;/*makes 3 item appear in one row in 3 columns*/
+}
+.portfolio-item-wrapper
+{
+	position: relative;/*by default html css doesnt allow to overlay texts and images on top of images this is the first step of facilitating it*/
+}
+.portfolio-img-background
+{
+	height: 350px; /*height is set to 350px*/
+	width: 100%;/*width is 100percent*/
+	background-size: cover;/*crops the image to same size if images are of diffrent size*/
+	background-position: center;/*images forms from center default is top left*/
+	background-repeat: no-repeat;/*doesnt repeat the image multiple times hosrizontally and verticallyu*/
+}	
+.text-img-wrapper
+{
+	position: absolute;
+	top: 0;
+	
+	display: flex;
+	height: 100%;/*uses 100% height of the parent div*/
+	flex-direction: column;/*displays the logo imnage and text div in column instead of horizontally*/
+	justify-content: center;/*center the img and text left to right*/
+	align-items: center;/*center the img and text top to bottom*/
+	text-align: center;/*text align in center*/
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.logo-wrapper img
+{
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.img-darken
+{
+	transition: 1s;
+	filter: brightness(10%);
+}
+.subtitle
+{
+	color: transparent;
+	background-color: transparent;
+	transition: 1s;
+}
+.text-img-wrapper:hover .subtitle
+{
+	color: white;
+	background-color: black;
+}
+.profile-image-wrapper img
+{
+	margin: 0px; 
+	width: 100%;
+}
+.two-column-wrapper
+{	
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.profile-content-wrapper
+{
+	margin-left: 10px;
+}
+
+.profile-content-wrapper h1
+{
+	background-color: lightblue;
+	opacity: 0.8;
+}
+
+.profile-content-wrapper h3
+{
+	background-color: lightblue;
+	opacity: 0.8;
+}
+
+.contact-wrapper
+{
+	display: flex;
+	-webkit-text-stroke: 0.2px white;
+	-webkit-text-fill-color: Black;
+	
+	
+}
+.contact-wrapper-w
+{
+	display: flex;
+	-webkit-text-stroke: .1px white;
+	-webkit-text-fill-color: black;
+	background-color: wheat;
+	opacity: 0.57;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+  }
+.brand{
+	font-size: 30px;
+	margin-top: -10px;
+}
